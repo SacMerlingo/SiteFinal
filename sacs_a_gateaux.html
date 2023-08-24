@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    function scrollImages(cardElement, direction) {
+      var imageElement = cardElement.querySelector('img');
+      var currentIndex = parseInt(imageElement.dataset.index);
+      var images = imageElement.dataset.images.split(',');
+
+      if (direction === 'prev') {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+      } else if (direction === 'next') {
+        currentIndex = (currentIndex + 1) % images.length;
+      }
+
+      imageElement.src = images[currentIndex];
+      imageElement.dataset.index = currentIndex.toString();
+    }
+  </script>
+</head>
+<body>
+  <div class="banner">
+    <img src="bandeauSophie.png" alt="bandeau">
+    <img src="bandeauSophie.png" alt="bandeau">
+    <img src="bandeauSophie.png" alt="bandeau">
+    <img src="bandeauSophie.png" alt="bandeau">
+    <img src="bandeauSophie.png" alt="bandeau">
+    <img src="bandeauSophie.png" alt="bandeau">
+    <img src="bandeauSophie2.png" alt="bandeau">
+  </div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="Pages/accueil.html">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Sacs</a>
+          <div class="dropdown-content">
+            <a href="images besaces/besaces.html">Besaces Flow</a>
+            <a href="images panières/panieres.html">Panières</a>
+            <a href="images sacs à main/sacs_a_main.html">Sacs à main</a>
+            <a href="images sacs à gâteaux/sacs_a_gateaux.html">Sacs à gâteaux</a>
+            <a href="images pochettes/pochettes.html">Pochettes</a>
+            <div class="sub-dropdown">
+              <a href="#">Cabas</a>
+              <div class="sub-dropdown-content">
+                <a href="images cabas/cabas_de_ville.html">Cabas de ville</a>
+                <a href="images cabas/cabas_enduits.html">Cabas enduits</a>
+                <a href="images cabas/cabas_simili.html">Cabas simili</a>
+                <a href="images cabas/cabas_tissu.html">Cabas tissu</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="images trousses/trousses.html">Trousses</a></li>
+        <li><a href="Pages/prochaines_ventes.html">Prochaines ventes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Les sacs à gâteaux Merlingo</h1>
+  <div class="background">
+  <div class="container">
+    <div class="card">
+      <img src="sac_a_gateaux1.jpg" alt="sac_a_gateaux 1" data-images="sac_a_gateaux1.jpg, sac_a_gateaux1bis.jpg" data-index="0">
+      <div class="dropdown">
+      </div>
+      <div class="prev" onclick="scrollImages(this.parentNode, 'prev')">◀</div>
+      <div class="next" onclick="scrollImages(this.parentNode, 'next')">▶</div>
+    </div>
+    <div class="card">
+      <img src="sac_a_gateaux2.jpg" alt="sac_a_gateaux 2" data-images="sac_a_gateaux2.jpg,sac_a_gateaux2bis.jpg" data-index="0">
+      <div class="dropdown">
+      </div>
+      <div class="prev" onclick="scrollImages(this.parentNode, 'prev')">◀</div>
+      <div class="next" onclick="scrollImages(this.parentNode, 'next')">▶</div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <a href="contact.html">Me contacter</a>
+        <a href="https://www.instagram.com/sac.merlingo/"><i class="fab fa-instagram fa-2sm" style="color :white"></i></a>
+      </div>
+    </footer>
+</body>
+</html>

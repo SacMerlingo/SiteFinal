@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    function scrollImages(cardElement, direction) {
+      var imageElement = cardElement.querySelector('img');
+      var currentIndex = parseInt(imageElement.dataset.index);
+      var images = imageElement.dataset.images.split(',');
+
+      if (direction === 'prev') {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+      } else if (direction === 'next') {
+        currentIndex = (currentIndex + 1) % images.length;
+      }
+
+      imageElement.src = images[currentIndex];
+      imageElement.dataset.index = currentIndex.toString();
+    }
+  </script>
+</head>
+<body>
+  <div class="banner">
+    <img src="bandeauSophie.png" alt="bandeau">
+    <img src="bandeauSophie.png" alt="bandeau">
+    <img src="bandeauSophie.png" alt="bandeau">
+    <img src="bandeauSophie.png" alt="bandeau">
+    <img src="bandeauSophie.png" alt="bandeau">
+    <img src="bandeauSophie.png" alt="bandeau">
+    <img src="bandeauSophie2.png" alt="bandeau">
+  </div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="Pages/accueil.html">Accueil</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Sacs</a>
+          <div class="dropdown-content">
+            <a href="images besaces/besaces.html">Besaces Flow</a>
+            <a href="images panières/panieres.html">Panières</a>
+            <a href="images sacs à main/sacs_a_main.html">Sacs à main</a>
+            <a href="images sacs à gâteaux/sacs_a_gateaux.html">Sacs à gâteaux</a>
+            <a href="images pochettes/pochettes.html">Pochettes</a>
+            <div class="sub-dropdown">
+              <a href="#">Cabas</a>
+              <div class="sub-dropdown-content">
+                <a href="images cabas/cabas_de_ville.html">Cabas de ville</a>
+                <a href="images cabas/cabas_enduits.html">Cabas enduits</a>
+                <a href="images cabas/cabas_simili.html">Cabas simili</a>
+                <a href="images cabas/cabas_tissu.html">Cabas tissu</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="images trousses/trousses.html">Trousses</a></li>
+        <li><a href="Pages/prochaines_ventes.html">Prochaines ventes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Les besaces Flow*</h1>
+  <div class="background">
+  <div class="container">
+    <div class="card">
+      <img src="besace8.jpg" alt="besace 8" data-images="besace8.jpg,besace8bis.jpg" data-index="0">
+      <div class="dropdown">
+      </div>
+      <div class="prev" onclick="scrollImages(this.parentNode, 'prev')">◀</div>
+      <div class="next" onclick="scrollImages(this.parentNode, 'next')">▶</div>
+    </div>
+    <div class="card">
+      <img src="besace2.png" alt="besace 2" data-images="besace2.png,besace2bis.png" data-index="0">
+      <div class="dropdown">
+      </div>
+      <div class="prev" onclick="scrollImages(this.parentNode, 'prev')">◀</div>
+      <div class="next" onclick="scrollImages(this.parentNode, 'next')">▶</div>
+    </div>
+    <div class="card">
+      <img src="besace3.jpg" alt="besace 3" data-images="besace3.jpg,besace3bis.jpg,besace3ter.jpg" data-index="0">
+      <div class="dropdown">
+      </div>
+      <div class="prev" onclick="scrollImages(this.parentNode, 'prev')">◀</div>
+      <div class="next" onclick="scrollImages(this.parentNode, 'next')">▶</div>
+    </div>
+    <div class="card">
+      <img src="besace14.jpg" alt="besace14">
+    </div>
+    <div class="card">
+      <img src="besace5.jpg" alt="besace 5" data-images="besace5.jpg,besace5bis.jpg" data-index="0">
+      <div class="dropdown">
+      </div>
+      <div class="prev" onclick="scrollImages(this.parentNode, 'prev')">◀</div>
+      <div class="next" onclick="scrollImages(this.parentNode, 'next')">▶</div>
+    </div>
+    <div class="card">
+      <img src="besace9.jpg" alt="besace 9" data-images="besace9.jpg,besace9bis.jpg" data-index="0">
+      <div class="dropdown">
+      </div>
+      <div class="prev" onclick="scrollImages(this.parentNode, 'prev')">◀</div>
+      <div class="next" onclick="scrollImages(this.parentNode, 'next')">▶</div>
+    </div>
+    <div class="card">
+      <img src="besace7.jpg" alt="besace 7" data-images="besace7.jpg,besace7bis.jpg" data-index="0">
+      <div class="dropdown">
+      </div>
+      <div class="prev" onclick="scrollImages(this.parentNode, 'prev')">◀</div>
+      <div class="next" onclick="scrollImages(this.parentNode, 'next')">▶</div>
+    </div>
+    <div class="card">
+      <img src="besace12.jpg" alt="besace 12" data-images="besace12.jpg,besace12bis.jpg" data-index="0">
+      <div class="dropdown">
+      </div>
+      <div class="prev" onclick="scrollImages(this.parentNode, 'prev')">◀</div>
+      <div class="next" onclick="scrollImages(this.parentNode, 'next')">▶</div>
+    </div>
+    <div class="card">
+      <img src="besace10.jpg" alt="besace10">
+    </div>
+    <div class="card">
+      <img src="besace11.jpg" alt="besace11">
+    </div>
+    <div class="card">
+      <img src="besace6.jpg" alt="besace 6" data-images="besace6.jpg,besace6bis.jpg" data-index="0">
+      <div class="dropdown">
+      </div>
+      <div class="prev" onclick="scrollImages(this.parentNode, 'prev')">◀</div>
+      <div class="next" onclick="scrollImages(this.parentNode, 'next')">▶</div>
+    </div>
+    <div class="card">
+      <img src="besace13.jpg" alt="besace13">
+    </div>
+    <div class="card">
+      <img src="besace1.jpg" alt="besace 1" data-images="besace1.jpg,besace1bis.jpg" data-index="0">
+      <div class="dropdown">
+      </div>
+      <div class="prev" onclick="scrollImages(this.parentNode, 'prev')">◀</div>
+      <div class="next" onclick="scrollImages(this.parentNode, 'next')">▶</div>
+    </div>
+    <div class="card">
+      <img src="besace4.jpg" alt="besace 4" data-images="besace4.jpg,besace4bis.jpg" data-index="0">
+      <div class="dropdown">
+      </div>
+      <div class="prev" onclick="scrollImages(this.parentNode, 'prev')">◀</div>
+      <div class="next" onclick="scrollImages(this.parentNode, 'next')">▶</div>
+    </div>
+    <div class="card">
+      <img src="besace15.jpg" alt="besace 15" data-images="besace15.jpg,besace5bis.jpg" data-index="0">
+      <div class="dropdown">
+      </div>
+      <div class="prev" onclick="scrollImages(this.parentNode, 'prev')">◀</div>
+      <div class="next" onclick="scrollImages(this.parentNode, 'next')">▶</div>
+    </div>
+  </div>
+
+  <h1>*Design Lalazuli
+    <br>
+    <br>
+  </h1>
+  <footer>
+    <div class="footer-content">
+      <a href="contact.html">Me contacter</a>
+      <a href="https://www.instagram.com/sac.merlingo/"><i class="fab fa-instagram fa-2sm" style="color :white"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
